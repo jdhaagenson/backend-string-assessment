@@ -2,9 +2,8 @@
 """
 Kenzie assignment: String2
 """
-# Your name, plus anyone who helped you with this assignment.
-# Give credit where credit is due.
-__author__ = "???"
+
+__author__ = "Jordan Haagenson"
 
 # Copyright 2010 Google Inc.
 # Licensed under the Apache License, Version 2.0
@@ -23,8 +22,7 @@ __author__ = "???"
 
 
 def verbing(s):
-    # your code here
-    return
+    return s if len(s) < 3 else s + 'ly' if s.endswith('ing') else s + 'ing'
 
 
 # E. not_bad
@@ -37,8 +35,10 @@ def verbing(s):
 
 
 def not_bad(s):
-    # your code here
-    return
+    if s.find('bad') > s.find('not'):
+        new = s[0:s.find('not')] + 'good' + s[s.find('bad')+3:]
+        return new
+    return s
 
 
 # F. front_back
@@ -51,9 +51,18 @@ def not_bad(s):
 #   a-front + b-front + a-back + b-back
 
 
+# def front_back(a, b):
+#     if len(a) % 2 == 1: #odd
+#         return a[:len(a)//2 + 1]+b[:len()]
+#     return a[0:len(a)//2]+b[0:len(b)//2]+a[len(a)//2:]+b[len(b)//2:] #even
+
 def front_back(a, b):
-    # your code here
-    return
+    obj1  = len(a)//2+ (len(a) % 2)
+    obj2 = len(b)//2 + (len(b) % 2)
+    return a[:obj1] + b[:obj2] + a[obj1:] + b[obj2:]
+    
+
+    
 
 
 # Provided simple test() function used in main() to print
