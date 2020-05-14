@@ -2,8 +2,7 @@
 """
 Kenzie assignment: String1
 """
-# Your name, plus anyone who helped you with this assignment.
-# Give credit where credit is due.
+
 __author__ = "Jordan Haagenson"
 
 # Copyright 2010 Google Inc.
@@ -28,7 +27,6 @@ __author__ = "Jordan Haagenson"
 
 
 def donuts(count):
-    # your code here
     num = 'many' if count >= 10 else str(count)
     return 'Number of donuts: '+num
 
@@ -43,7 +41,6 @@ def donuts(count):
 
 
 def both_ends(s):
-    # your code here
     if len(s) <= 2:
         return ''
     chars = s[:2]
@@ -63,7 +60,6 @@ def both_ends(s):
 
 
 def fix_start(s):
-    # your code here
     first = s[0]
     rest = s[1:]
     new_s = first + rest.replace(first, '*')
@@ -81,7 +77,6 @@ def fix_start(s):
 
 
 def mix_up(a, b):
-    # your code here
     ab = b[:2]+a[2:]
     ba = a[:2]+b[2:]
     return ab+' '+ba
