@@ -50,20 +50,11 @@ def not_bad(s):
 # Given 2 strings, a and b, return a string of the form:
 #   a-front + b-front + a-back + b-back
 
-
-# def front_back(a, b):
-#     if len(a) % 2 == 1: #odd
-#         return a[:len(a)//2 + 1]+b[:len()]
-#     return a[0:len(a)//2]+b[0:len(b)//2]+a[len(a)//2:]+b[len(b)//2:] #even
-
 def front_back(a, b):
     obj1  = len(a)//2+ (len(a) % 2)
     obj2 = len(b)//2 + (len(b) % 2)
     return a[:obj1] + b[:obj2] + a[obj1:] + b[obj2:]
     
-
-    
-
 
 # Provided simple test() function used in main() to print
 # what each function returns vs. what it's supposed to return.
